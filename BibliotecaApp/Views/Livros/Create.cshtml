@@ -1,0 +1,33 @@
+@model BibliotecaApp.Models.Livro
+
+@{
+    ViewData["Title"] = "Novo Livro";
+}
+
+<div class="card shadow-lg p-4 col-md-6 mx-auto">
+    <h2 class="fw-bold text-primary mb-4">➕ Cadastrar Novo Livro</h2>
+
+    <form asp-action="Create" method="post">
+
+        <div class="mb-3">
+            <label class="form-label">Título</label>
+            <input asp-for="Titulo" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Autor</label>
+            <input asp-for="Autor" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Ano de Publicação</label>
+            <input asp-for="AnoPublicacao" class="form-control" />
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+            <button type="submit" class="btn btn-primary">Salvar</button>
+        </div>
+
+    </form>
+</div>
